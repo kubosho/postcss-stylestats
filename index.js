@@ -1,8 +1,11 @@
 const postcss = require('postcss');
 const StyleStats = require('stylestats');
 
-module.exports = postcss.plugin('postcss-stylestats', (opts = {}) => (
-    (root, result) => {
+const type = 'stylestats';
+const plugin = 'postcss-stylestats';
+
+module.exports = postcss.plugin(plugin, (opts = {}) => {
+    return (root, result) => {
         const styleStats = new StyleStats(root.source.input.css, opts);
 
         return styleStats.parse((error, stats) => {
@@ -12,12 +15,12 @@ module.exports = postcss.plugin('postcss-stylestats', (opts = {}) => (
             }
 
             result.messages.push({
-                type: 'stylestats',
-                plugin: 'postcss-stylestats',
-                stats: stats
+                type,
+                plugin,
+                stats
             });
 
             return result;
         });
-    }
-));
+    };
+});
