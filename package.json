@@ -1,0 +1,33 @@
+{
+  "name": "postcss-stylestats",
+  "version": "0.1.0",
+  "description": "PostCSS plugin for StyleStats",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "stylestats"
+  ],
+  "author": "kubosho <ta2@o2p.jp>",
+  "license": "MIT",
+  "repository": "kubosho/postcss-stylestats",
+  "bugs": {
+    "url": "https://github.com/kubosho/postcss-stylestats/issues"
+  },
+  "homepage": "https://github.com/kubosho/postcss-stylestats",
+  "dependencies": {
+    "postcss": "^5.2.5",
+    "stylestats": "^6.3.0"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "eslint": "^3.9.0",
+    "eslint-config-postcss": "^2.0.2"
+  },
+  "scripts": {
+    "test": "ava && eslint *.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5"
+  }
+}
