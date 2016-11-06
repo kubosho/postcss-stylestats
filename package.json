@@ -8,6 +8,9 @@
     "postcss-plugin",
     "stylestats"
   ],
+  "engines": {
+    "node": ">=6.x"
+  },
   "author": "kubosho <ta2@o2p.jp>",
   "license": "MIT",
   "repository": "kubosho/postcss-stylestats",
