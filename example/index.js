@@ -1,16 +1,3 @@
-# postcss-stylestats
-
-PostCSS plugin for [StyleStats](https://github.com/t32k/stylestats).
-
-## Install
-
-```
-npm install --save-dev postcss-stylestats
-```
-
-## Example
-
-```
 const fs = require('fs');
 const postcss = require('postcss');
 const stylestats = require('postcss-stylestats');
@@ -27,6 +14,3 @@ postcss([stylestats, cssnano])
             fs.writeFileSync('stats.js', JSON.stringify(result.messages[0].stats));
         }
     });
-```
-
-[Click here for details](https://github.com/kubosho/postcss-stylestats/tree/master/example).
