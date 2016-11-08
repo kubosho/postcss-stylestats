@@ -1,3 +1,7 @@
+## v0.2.1
+
+- Add example files.
+
 ## v0.2.0
 
 - Remove Node.js v4.x support.
