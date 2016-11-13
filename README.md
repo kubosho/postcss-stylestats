@@ -1,5 +1,9 @@
 # postcss-stylestats
 
+[![Build Status](https://travis-ci.org/kubosho/postcss-stylestats.svg?branch=master)](https://travis-ci.org/kubosho/postcss-stylestats)
+[![David](https://david-dm.org/kubosho/postcss-stylestats.svg)](https://david-dm.org/kubosho/postcss-stylestats)
+[![npm](https://img.shields.io/npm/v/postcss-stylestats.svg)](https://www.npmjs.com/package/postcss-stylestats)
+
 PostCSS plugin for [StyleStats](https://github.com/t32k/stylestats).
 
 ## Install
