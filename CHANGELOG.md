@@ -1,3 +1,9 @@
+## v0.2.2
+
+- README improvement.
+    - Badges added (Travis CI, David, npm).
+    - Syntax Highlight added to example source code.
+
 ## v0.2.1
 
 - Add example files.
