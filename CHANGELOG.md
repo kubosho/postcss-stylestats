@@ -1,3 +1,9 @@
+## v0.2.3
+
+- Add document for contributor.
+    - GitHub template added.
+    - Contribute step added.
+
 ## v0.2.2
 
 - README improvement.
