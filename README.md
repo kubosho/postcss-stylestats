@@ -10,7 +10,7 @@ npm install --save-dev postcss-stylestats
 
 ## Example
 
-```
+```js
 const fs = require('fs');
 const postcss = require('postcss');
 const stylestats = require('postcss-stylestats');
