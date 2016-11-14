@@ -11,6 +11,6 @@ postcss([stylestats, cssnano])
         fs.writeFileSync('main.min.css', result.css);
 
         if (result.messages[0].stats) {
-            fs.writeFileSync('stats.json', JSON.stringify(result.messages[0].stats, null, 2));
+            console.log(result.messages[0].stats);
         }
     });
