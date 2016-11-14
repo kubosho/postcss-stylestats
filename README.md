@@ -27,7 +27,7 @@ postcss([require('postcss-stylestats')])
     });
 ```
 
-[Click here for example code details](https://github.com/kubosho/postcss-stylestats/tree/master/example).
+[Click here for more example codes.](https://github.com/kubosho/postcss-stylestats/tree/master/example).
 
 ### Returned JSON (example)
 
@@ -102,6 +102,8 @@ postcss([require('postcss-stylestats')])
   "mediaQueries": 0
 }
 ```
+
+[Click here for metric details.](https://github.com/t32k/stylestats#metrics)
 
 ## Contributions
 
