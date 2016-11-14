@@ -4,7 +4,9 @@ const StyleStats = require('stylestats');
 const type = 'stylestats';
 const plugin = 'postcss-stylestats';
 
-module.exports = postcss.plugin(plugin, (opts = {}) => {
+module.exports = postcss.plugin(plugin, (opts) => {
+    opts = opts || {};
+
     return (root, result) => {
         const styleStats = new StyleStats(root.source.input.css, opts);
 
