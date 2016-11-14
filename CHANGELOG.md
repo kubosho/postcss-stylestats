@@ -1,3 +1,9 @@
+## v0.3.1
+
+- README improvement.
+    - Add example CSS input.
+    - Modify output.
+
 ## v0.3.0
 
 - Node.js version 4.x support.
