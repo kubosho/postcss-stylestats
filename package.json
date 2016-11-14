@@ -9,7 +9,7 @@
     "stylestats"
   ],
   "engines": {
-    "node": ">=6.x"
+    "node": ">=0.12"
   },
   "author": "kubosho <ta2@o2p.jp>",
   "license": "MIT",
