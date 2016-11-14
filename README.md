@@ -6,32 +6,25 @@
 
 PostCSS plugin for [StyleStats](https://github.com/t32k/stylestats).
 
-## Install
+## Examples
 
-```
-npm install --save-dev postcss-stylestats
+### input (input.css)
+
+```css
+div {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #003760;
+    color: #fff;
+    text-align: center;
+}
 ```
 
-## Usage
+### output (CSS statistics data for StyleStats)
 
 ```js
-const fs = require('fs');
-const css = fs.readFileSync('main.css', 'utf-8');
-
-postcss([require('postcss-stylestats')])
-    .process(css)
-    .then((result) => {
-        if (result.messages[0].stats) {
-            fs.writeFileSync('stats.json', JSON.stringify(result.messages[0].stats, null, 2));
-        }
-    });
-```
-
-[Click here for more example codes.](https://github.com/kubosho/postcss-stylestats/tree/master/example)
-
-### Returned JSON (example)
-
-```json
 {
   "published": "2016-11-14T05:04:18.521Z",
   "paths": [],
@@ -61,49 +54,32 @@ postcss([require('postcss-stylestats')])
   "uniqueColors": [
     "#FFFFFF"
   ],
-  "totalUniqueBackgroundImages": 0,
-  "uniqueBackgroundImages": [],
-  "idSelectors": 0,
-  "universalSelectors": 0,
-  "unqualifiedAttributeSelectors": 0,
-  "javascriptSpecificSelectors": 0,
-  "importantKeywords": 0,
-  "floatProperties": 0,
-  "propertiesCount": [
-    {
-      "property": "width",
-      "count": 1
-    },
-    {
-      "property": "height",
-      "count": 1
-    },
-    {
-      "property": "margin",
-      "count": 1
-    },
-    {
-      "property": "padding",
-      "count": 1
-    },
-    {
-      "property": "background-color",
-      "count": 1
-    },
-    {
-      "property": "color",
-      "count": 1
-    },
-    {
-      "property": "text-align",
-      "count": 1
-    }
-  ],
-  "mediaQueries": 0
+  ...
 }
 ```
 
-[Click here for metric details.](https://github.com/t32k/stylestats#metrics)
+## Install
+
+```
+npm install --save-dev postcss-stylestats
+```
+
+## Usage
+
+```js
+const fs = require('fs');
+const stylestats = require('postcss-stylestats');
+
+const css = fs.readFileSync('input.css', 'utf-8');
+
+postcss([stylestats])
+    .process(css)
+    .then((result) => {
+        if (result.messages[0].stats) {
+            console.log(result.messages[0].stats);
+        }
+    });
+```
 
 ## Contributions
 
