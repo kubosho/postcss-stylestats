@@ -1,3 +1,12 @@
+## v0.3.0
+
+- Node.js version 4.x support.
+- Add more example codes.
+- README improvement.
+    - Add example CSS statistics data.
+    - Add CSS statistical detailed link.
+    - Modify wording.
+
 ## v0.2.3
 
 - Add document for contributor.
