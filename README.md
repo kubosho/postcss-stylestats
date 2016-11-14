@@ -27,7 +27,7 @@ postcss([require('postcss-stylestats')])
     });
 ```
 
-[Click here for more example codes.](https://github.com/kubosho/postcss-stylestats/tree/master/example).
+[Click here for more example codes.](https://github.com/kubosho/postcss-stylestats/tree/master/example)
 
 ### Returned JSON (example)
 
