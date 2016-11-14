@@ -12,28 +12,96 @@ PostCSS plugin for [StyleStats](https://github.com/t32k/stylestats).
 npm install --save-dev postcss-stylestats
 ```
 
-## Example
+## Usage
 
 ```js
 const fs = require('fs');
-const postcss = require('postcss');
-const stylestats = require('postcss-stylestats');
-const cssnano = require('cssnano');
-
 const css = fs.readFileSync('main.css', 'utf-8');
 
-postcss([stylestats, cssnano])
+postcss([require('postcss-stylestats')])
     .process(css)
     .then((result) => {
-        fs.writeFileSync('main.min.css', result.css);
-
         if (result.messages[0].stats) {
-            fs.writeFileSync('stats.js', JSON.stringify(result.messages[0].stats));
+            fs.writeFileSync('stats.json', JSON.stringify(result.messages[0].stats, null, 2));
         }
     });
 ```
 
-[Click here for details](https://github.com/kubosho/postcss-stylestats/tree/master/example).
+[Click here for example code details](https://github.com/kubosho/postcss-stylestats/tree/master/example).
+
+### Returned JSON (example)
+
+```json
+{
+  "published": "2016-11-14T05:04:18.521Z",
+  "paths": [],
+  "stylesheets": 0,
+  "styleElements": 0,
+  "size": 154,
+  "dataUriSize": 0,
+  "ratioOfDataUriSize": 0,
+  "gzippedSize": 126,
+  "rules": 1,
+  "selectors": 1,
+  "declarations": 7,
+  "simplicity": 1,
+  "averageOfIdentifier": 1,
+  "mostIdentifier": 1,
+  "mostIdentifierSelector": "div",
+  "averageOfCohesion": 7,
+  "lowestCohesion": 7,
+  "lowestCohesionSelector": [
+    "div"
+  ],
+  "totalUniqueFontSizes": 0,
+  "uniqueFontSizes": [],
+  "totalUniqueFontFamilies": 0,
+  "uniqueFontFamilies": [],
+  "totalUniqueColors": 1,
+  "uniqueColors": [
+    "#FFFFFF"
+  ],
+  "totalUniqueBackgroundImages": 0,
+  "uniqueBackgroundImages": [],
+  "idSelectors": 0,
+  "universalSelectors": 0,
+  "unqualifiedAttributeSelectors": 0,
+  "javascriptSpecificSelectors": 0,
+  "importantKeywords": 0,
+  "floatProperties": 0,
+  "propertiesCount": [
+    {
+      "property": "width",
+      "count": 1
+    },
+    {
+      "property": "height",
+      "count": 1
+    },
+    {
+      "property": "margin",
+      "count": 1
+    },
+    {
+      "property": "padding",
+      "count": 1
+    },
+    {
+      "property": "background-color",
+      "count": 1
+    },
+    {
+      "property": "color",
+      "count": 1
+    },
+    {
+      "property": "text-align",
+      "count": 1
+    }
+  ],
+  "mediaQueries": 0
+}
+```
 
 ## Contributions
 
