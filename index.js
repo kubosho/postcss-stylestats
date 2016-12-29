@@ -24,9 +24,6 @@ module.exports = postcss.plugin(plugin, (opts) => {
             case 'json':
                 method = 'toJSON';
                 break;
-            case 'csv':
-                method = 'toCSV';
-                break;
             case 'html':
                 method = 'toHTML';
                 break;
