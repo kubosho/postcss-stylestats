@@ -11,14 +11,14 @@ function run(input, opts = {}, scb, ecb) {
         .catch(ecb);
 }
 
-test('result.messages have stylestats data', t => {
+test('`result.messages` have stylestats data', t => {
     return run('.a { }', (result) => {
         t.false(result.messages[0].stats === null);
         t.false(result.messages[0].stats === {});
     });
 });
 
-test('Can output of JSON format', t => {
+test('can output of JSON format', t => {
     return run('.a { }', { type: 'json' }, (result) => {
         let actual;
 
@@ -30,5 +30,17 @@ test('Can output of JSON format', t => {
 
         t.false(actual === null);
         t.false(actual.name === 'SyntaxError');
+    });
+});
+
+test('can output of HTML format', t => {
+    return run('.a { }', { type: 'html' }, (result) => {
+        t.false(result === null);
+    });
+});
+
+test('can output of Markdown format', t => {
+    return run('.a { }', { type: 'md' }, (result) => {
+        t.false(result === null);
     });
 });
