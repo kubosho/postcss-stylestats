@@ -16,6 +16,6 @@
   "devDependencies": {
     "cssnano": "^3.8.0",
     "postcss": "^5.2.5",
-    "postcss-stylestats": "^0.2.3"
+    "postcss-stylestats": "../../index.js"
   }
 }
