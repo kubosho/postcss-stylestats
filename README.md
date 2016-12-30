@@ -125,6 +125,14 @@ postcss([stylestats])
     });
 ```
 
+### Option
+
+#### `type`
+
+Output format specify. Default is `table`. [Option specify example](https://github.com/kubosho/postcss-stylestats/blob/f51db92/test.js#L7-L11).
+
+Can spefify format to `json`, `html` and `md`.
+
 ## Contributions
 
 We welcome your pull requests.
