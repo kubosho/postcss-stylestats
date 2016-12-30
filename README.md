@@ -130,8 +130,8 @@ postcss([stylestats])
 We welcome your pull requests.
 
 1. Fork the repo and create your branch from master.
-1. Create your feature branch: git checkout -b foo-bar.
-1. Commit your changes: git commit -am 'Add awesome feature'.
-1. Push to the branch: git push origin foo-bar.
+1. Create your feature branch: `git checkout -b foo-bar`.
+1. Commit your changes: `git commit -am 'Add awesome feature'`.
+1. Push to the branch: `git push origin foo-bar`.
 1. Ensure the test suite passes.
 1. Submit Pull Request!
