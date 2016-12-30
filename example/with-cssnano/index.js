@@ -1,6 +1,6 @@
 const fs = require('fs');
 const postcss = require('postcss');
-const stylestats = require('postcss-stylestats');
+const stylestats = require('../../index.js');
 const cssnano = require('cssnano');
 
 const css = fs.readFileSync('main.css', 'utf-8');
