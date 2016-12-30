@@ -1,3 +1,12 @@
+## v1.0.0
+
+- Default output format changed.
+    - JSON => Table
+- Support multiple output formats.
+    - fixed #1.
+- README improvement.
+    - Add option.
+
 ## v0.3.1
 
 - README improvement.
