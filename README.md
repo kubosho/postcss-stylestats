@@ -1,4 +1,6 @@
-# postcss-stylestats
+# [Unmainted] postcss-stylestats
+
+**No longer actively maintaining this project due to lack of motivation. This project and source code keep on GitHub and on npm, but no longer maintaining in my side.**
 
 [![Build Status](https://travis-ci.org/kubosho/postcss-stylestats.svg?branch=master)](https://travis-ci.org/kubosho/postcss-stylestats)
 [![David](https://david-dm.org/kubosho/postcss-stylestats.svg)](https://david-dm.org/kubosho/postcss-stylestats)
